@@ -283,55 +283,83 @@
         </div>
     </section>
 
-    <!-- Urgency / CTA -->
-    <section class="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
-        <div class="container mx-auto px-6 text-center">
-            <div class="max-w-4xl mx-auto scroll-reveal">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/20 border border-red-500/30 text-red-400 text-sm font-bold mb-6 animate-pulse">
-                    <i data-lucide="clock" class="w-4 h-4"></i>
-                    LISTA DE PRIORIDADE ABERTA
-                </div>
-                
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">Não perca essa oportunidade</h2>
-                <p class="text-xl text-slate-300 mb-8">
-                    A convenção oficial é dia <span class="text-cyan-400 font-bold">12</span>, mas já dá para se posicionar antes e garantir prioridade na escolha das unidades.
-                </p>
-
-                <div class="grid md:grid-cols-3 gap-6 mb-12 text-left">
-                    <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-                        <i data-lucide="check-circle" class="w-8 h-8 text-emerald-400 mb-3"></i>
-                        <h4 class="font-bold text-white mb-2">Escolha Melhor Unidade</h4>
-                        <p class="text-sm text-slate-400">Andares mais altos, vistas privilegiadas e melhores posições solar.</p>
-                    </div>
-                    <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-                        <i data-lucide="check-circle" class="w-8 h-8 text-emerald-400 mb-3"></i>
-                        <h4 class="font-bold text-white mb-2">Preço de Lançamento</h4>
-                        <p class="text-sm text-slate-400">Garantia do menor valor possível antes da primeira valorização pós-lançamento.</p>
-                    </div>
-                    <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-                        <i data-lucide="check-circle" class="w-8 h-8 text-emerald-400 mb-3"></i>
-                        <h4 class="font-bold text-white mb-2">Documentação Prioritária</h4>
-                        <p class="text-sm text-slate-400">Processo de aprovação e montagem de pasta com atendimento VIP.</p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col md:flex-row gap-4 justify-center">
-                    <a href="https://www.calper.com.br/empreendimentos/feel-pontal-oceanico/" target="_blank" class="inline-flex items-center justify-center gap-3 bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-8 rounded-xl transition-all transform hover:scale-105 shadow-lg shadow-cyan-500/25">
-                        <i data-lucide="external-link" class="w-5 h-5"></i>
-                        Ver Página Oficial
-                    </a>
-                    <a href="https://www.youtube.com/watch?v=uCAdpWmbGeE" target="_blank" class="inline-flex items-center justify-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-xl transition-all transform hover:scale-105 shadow-lg shadow-red-600/25">
-                        <i data-lucide="play" class="w-5 h-5"></i>
-                        Assistir Vídeo
-                    </a>
-                </div>
-
-                <p class="mt-8 text-slate-500 text-sm">
-                    Construtora Calper • Rua Luiz Carlos Sarolli, Pontal Oceânico • Recreio dos Bandeirantes/RJ
-                </p>
+<!-- SEÇÃO DE INSCRIÇÃO - LINK DIRETO ESTILIZADO -->
+<section class="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto scroll-reveal text-center">
+            
+            <!-- Badge de urgência -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/20 border border-red-500/30 text-red-400 text-sm font-bold mb-6 animate-pulse">
+                <i data-lucide="clock" class="w-4 h-4"></i>
+                VAGAS LIMITADAS NA LISTA DE PRIORIDADE
             </div>
+            
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Não perca essa oportunidade</h2>
+            <p class="text-xl text-slate-300 mb-4">
+                A convenção oficial é dia <span class="text-cyan-400 font-bold">12</span>, mas já dá para se posicionar antes.
+            </p>
+            <p class="text-slate-400 mb-12 max-w-2xl mx-auto">
+                Preencha o formulário para entrar na lista de prioridade e escolher sua unidade antes de todo mundo.
+            </p>
+
+            <!-- BOTÃO PRINCIPAL - LINK DIRETO PARA O FORMS -->
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAoj46VoQwGWz0ovT20GpioYZxyMBKaixf7C9RH8UKEnWs6w/viewform" 
+               target="_blank"
+               class="group inline-flex items-center gap-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-black text-lg md:text-xl py-6 px-10 md:px-14 rounded-2xl transition-all transform hover:scale-105 shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-400/40">
+                <i data-lucide="clipboard-list" class="w-7 h-7 group-hover:animate-bounce"></i>
+                QUERO ENTRAR NA LISTA DE PRIORIDADE
+            </a>
+            
+            <p class="text-slate-500 mt-4 text-sm flex items-center justify-center gap-2">
+                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+                Leva menos de 2 minutos • Sem compromisso
+            </p>
+
+            <!-- Benefícios -->
+            <div class="grid md:grid-cols-3 gap-6 mt-16 text-left">
+                <div class="glass-card p-6 rounded-xl border border-slate-700/50 hover:border-cyan-500/30 transition-colors">
+                    <div class="w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="star" class="w-6 h-6 text-cyan-400"></i>
+                    </div>
+                    <h4 class="font-bold text-white mb-2">Prioridade na Escolha</h4>
+                    <p class="text-sm text-slate-400">Andares mais altos, melhor vista e posição solar</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl border border-slate-700/50 hover:border-emerald-500/30 transition-colors">
+                    <div class="w-12 h-12 bg-emerald-500/20 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="tag" class="w-6 h-6 text-emerald-400"></i>
+                    </div>
+                    <h4 class="font-bold text-white mb-2">Preço de Lançamento</h4>
+                    <p class="text-sm text-slate-400">Garantia do menor valor antes da valorização</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl border border-slate-700/50 hover:border-purple-500/30 transition-colors">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="shield" class="w-6 h-6 text-purple-400"></i>
+                    </div>
+                    <h4 class="font-bold text-white mb-2">Atendimento VIP</h4>
+                    <p class="text-sm text-slate-400">Acompanhamento exclusivo durante todo o processo</p>
+                </div>
+            </div>
+
+            <!-- Links oficiais -->
+            <div class="flex flex-col md:flex-row gap-4 justify-center mt-12">
+                <a href="https://www.calper.com.br/empreendimentos/feel-pontal-oceanico/" target="_blank" 
+                   class="inline-flex items-center justify-center gap-3 bg-slate-700 hover:bg-slate-600 text-white font-bold py-4 px-8 rounded-xl transition-all transform hover:scale-105 border border-slate-600">
+                    <i data-lucide="external-link" class="w-5 h-5"></i>
+                    Ver Página Oficial
+                </a>
+                <a href="https://www.youtube.com/watch?v=uCAdpWmbGeE" target="_blank" 
+                   class="inline-flex items-center justify-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-xl transition-all transform hover:scale-105 shadow-lg shadow-red-600/25">
+                    <i data-lucide="play" class="w-5 h-5"></i>
+                    Assistir Vídeo
+                </a>
+            </div>
+
+            <p class="mt-8 text-slate-500 text-sm">
+                Construtora Calper • Rua Luiz Carlos Sarolli, Pontal Oceânico • Recreio dos Bandeirantes/RJ
+            </p>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="bg-slate-950 py-8 border-t border-slate-800">
