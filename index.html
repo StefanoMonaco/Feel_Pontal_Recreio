@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feel Pontal Oceânico - Oportunidade de Investimento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .price-tag {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            box-shadow: 0 10px 40px -10px rgba(16, 185, 129, 0.5);
+        }
+        .ocean-gradient {
+            background: linear-gradient(180deg, #0f172a 0%, #1e3a5f 50%, #0ea5e9 100%);
+        }
+        /* CORREÇÃO: Container do gráfico com altura fixa */
+        .chart-container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-white overflow-x-hidden">
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden ocean-gradient">
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl animate-float" style="animation-delay: 2s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="inline-block mb-4 px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-400/30 text-cyan-300 text-sm font-semibold tracking-wider uppercase animate-pulse-slow">
+                Lançamento Exclusivo 2026
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                <span class="block text-white">FEEL</span>
+                <span class="gradient-text">Pontal Oceânico</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto font-light">
+                O primeiro empreendimento <span class="text-cyan-400 font-semibold">licenciado para Short Stay</span> do Recreio dos Bandeirantes
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <div class="glass-card px-6 py-3 rounded-xl flex items-center gap-3">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-cyan-400"></i>
+                    <span class="font-medium">Pontal Oceânico, Recreio</span>
+                </div>
+                <div class="glass-card px-6 py-3 rounded-xl flex items-center gap-3">
+                    <i data-lucide="building" class="w-5 h-5 text-cyan-400"></i>
+                    <span class="font-medium">420 Unidades</span>
+                </div>
+                <div class="glass-card px-6 py-3 rounded-xl flex items-center gap-3">
+                    <i data-lucide="calendar" class="w-5 h-5 text-cyan-400"></i>
+                    <span class="font-medium">Entrega: 45-50 meses</span>
+                </div>
+            </div>
+
+            <div class="price-tag inline-block px-8 py-4 rounded-2xl text-white transform hover:scale-105 transition-transform cursor-pointer">
+                <span class="block text-sm font-medium opacity-90">A partir de</span>
+                <span class="block text-4xl font-black">R$ 220.000</span>
+                <span class="block text-sm mt-1 opacity-90">Entrada: apenas 10%</span>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i data-lucide="chevron-down" class="w-8 h-8 text-cyan-400"></i>
+        </div>
+    </section>
+
+    <!-- Investment Highlights -->
+    <section class="py-20 bg-slate-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 scroll-reveal">
+                Por que investir agora?
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl scroll-reveal hover:bg-slate-800/50 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="trending-up" class="w-7 h-7 text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Valorização Imediata</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Preço de lançamento <span class="text-cyan-400 font-semibold">R$ 220 mil</span> está bem abaixo do valor de mercado na região. Você entra já ganhando na valorização.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl scroll-reveal hover:bg-slate-800/50 transition-all duration-300 transform hover:-translate-y-2" style="transition-delay: 0.1s;">
+                    <div class="w-14 h-14 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="key" class="w-7 h-7 text-emerald-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Renda com Airbnb</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        <span class="text-emerald-400 font-semibold">Licenciado para Short Stay</span> desde o nascimento. O mercado de locação por temporada na região só cresce, com ocupação média de 53% no Rio.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl scroll-reveal hover:bg-slate-800/50 transition-all duration-300 transform hover:-translate-y-2" style="transition-delay: 0.2s;">
+                    <div class="w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="shield-check" class="w-7 h-7 text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Pagamento Facilitado</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Sem juros bancários. <span class="text-purple-400 font-semibold">10% de entrada</span>, 5% na entrega e restante parcelado durante a obra com correção INCC.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Specs -->
+    <section class="py-20 bg-slate-800/50">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="scroll-reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">O Empreendimento</h2>
+                    <p class="text-slate-400 text-lg mb-8">
+                        Localizado na <span class="text-white font-semibold">Rua Luiz Carlos Sarolli</span>, no bairro planejado do Pontal Oceânico, com segurança 24h, transporte exclusivo e comércio local.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 p-4 bg-slate-700/30 rounded-xl">
+                            <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center shrink-0">
+                                <i data-lucide="layout" class="w-6 h-6 text-cyan-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">4 Blocos • 6 Andares</h4>
+                                <p class="text-sm text-slate-400">Total de 420 unidades</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 bg-slate-700/30 rounded-xl">
+                            <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center shrink-0">
+                                <i data-lucide="home" class="w-6 h-6 text-cyan-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Tipologias Variadas</h4>
+                                <p class="text-sm text-slate-400">Studio padrão, Double Suítes e Garden (a partir de 30m²)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 bg-slate-700/30 rounded-xl">
+                            <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center shrink-0">
+                                <i data-lucide="umbrella" class="w-6 h-6 text-cyan-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Lazer Completo</h4>
+                                <p class="text-sm text-slate-400">Estrutura completa de lazer e entretenimento</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scroll-reveal">
+                    <div class="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 p-8 rounded-3xl border border-cyan-500/20">
+                        <h3 class="text-2xl font-bold mb-6 text-center">Fluxo de Pagamento</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="relative">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-cyan-400 font-semibold">Entrada</span>
+                                    <span class="text-2xl font-bold">10%</span>
+                                </div>
+                                <div class="w-full bg-slate-700 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-3 rounded-full" style="width: 10%"></div>
+                                </div>
+                                <p class="text-sm text-slate-400 mt-1">~R$ 22.000</p>
+                            </div>
+
+                            <div class="relative">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-cyan-400 font-semibold">Parcelas Obra</span>
+                                    <span class="text-2xl font-bold">85%</span>
+                                </div>
+                                <div class="w-full bg-slate-700 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-3 rounded-full" style="width: 85%"></div>
+                                </div>
+                                <p class="text-sm text-slate-400 mt-1">Mensais + Anuais (INCC)</p>
+                            </div>
+
+                            <div class="relative">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-cyan-400 font-semibold">Entrega das Chaves</span>
+                                    <span class="text-2xl font-bold">5%</span>
+                                </div>
+                                <div class="w-full bg-slate-700 rounded-full h-3">
+                                    <div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-3 rounded-full" style="width: 5%"></div>
+                                </div>
+                                <p class="text-sm text-slate-400 mt-1">~R$ 11.500</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-xl text-center">
+                            <p class="text-emerald-400 font-semibold text-sm uppercase tracking-wider mb-1">Total do Investimento</p>
+                            <p class="text-3xl font-black text-white">R$ 220.000</p>
+                            <p class="text-sm text-slate-400 mt-2">Sem juros bancários • Direto com a construtora</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Data -->
+    <section class="py-20 bg-slate-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 scroll-reveal">Dados do Mercado</h2>
+            <p class="text-center text-slate-400 mb-12 scroll-reveal">Por que o Recreio é uma mina de ouro para Airbnb?</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="glass-card p-6 rounded-2xl text-center scroll-reveal">
+                    <div class="text-4xl font-black text-cyan-400 mb-2">R$ 590</div>
+                    <div class="text-sm text-slate-400">Diária média Airbnb no Rio</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center scroll-reveal" style="transition-delay: 0.1s;">
+                    <div class="text-4xl font-black text-emerald-400 mb-2">53%</div>
+                    <div class="text-sm text-slate-400">Ocupação média anual</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center scroll-reveal" style="transition-delay: 0.2s;">
+                    <div class="text-4xl font-black text-purple-400 mb-2">4-6%</div>
+                    <div class="text-sm text-slate-400">Rentabilidade líquida estimada</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center scroll-reveal" style="transition-delay: 0.3s;">
+                    <div class="text-4xl font-black text-orange-400 mb-2">2x</div>
+                    <div class="text-sm text-slate-400">Mais rentável que aluguel tradicional</div>
+                </div>
+            </div>
+
+            <!-- CORREÇÃO: Gráficos com container de altura fixa -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-card p-6 rounded-2xl scroll-reveal">
+                    <h3 class="text-xl font-bold mb-4">Estimativa de Receita Mensal (Airbnb)</h3>
+                    <div class="chart-container">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-4 text-center">*Baseado em ocupação de 53% e diária média de R$ 350-450 para studio na região</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl scroll-reveal" style="transition-delay: 0.2s;">
+                    <h3 class="text-xl font-bold mb-4">Comparativo: Aluguel vs Airbnb</h3>
+                    <div class="chart-container">
+                        <canvas id="compareChart"></canvas>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-4 text-center">*Estimativa para studio de 30m² na Zona Oeste do Rio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency / CTA -->
+    <section class="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-4xl mx-auto scroll-reveal">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/20 border border-red-500/30 text-red-400 text-sm font-bold mb-6 animate-pulse">
+                    <i data-lucide="clock" class="w-4 h-4"></i>
+                    LISTA DE PRIORIDADE ABERTA
+                </div>
+                
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Não perca essa oportunidade</h2>
+                <p class="text-xl text-slate-300 mb-8">
+                    A convenção oficial é dia <span class="text-cyan-400 font-bold">12</span>, mas já dá para se posicionar antes e garantir prioridade na escolha das unidades.
+                </p>
+
+                <div class="grid md:grid-cols-3 gap-6 mb-12 text-left">
+                    <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                        <i data-lucide="check-circle" class="w-8 h-8 text-emerald-400 mb-3"></i>
+                        <h4 class="font-bold text-white mb-2">Escolha Melhor Unidade</h4>
+                        <p class="text-sm text-slate-400">Andares mais altos, vistas privilegiadas e melhores posições solar.</p>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                        <i data-lucide="check-circle" class="w-8 h-8 text-emerald-400 mb-3"></i>
+                        <h4 class="font-bold text-white mb-2">Preço de Lançamento</h4>
+                        <p class="text-sm text-slate-400">Garantia do menor valor possível antes da primeira valorização pós-lançamento.</p>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                        <i data-lucide="check-circle" class="w-8 h-8 text-emerald-400 mb-3"></i>
+                        <h4 class="font-bold text-white mb-2">Documentação Prioritária</h4>
+                        <p class="text-sm text-slate-400">Processo de aprovação e montagem de pasta com atendimento VIP.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <a href="https://www.calper.com.br/empreendimentos/feel-pontal-oceanico/" target="_blank" class="inline-flex items-center justify-center gap-3 bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-8 rounded-xl transition-all transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+                        <i data-lucide="external-link" class="w-5 h-5"></i>
+                        Ver Página Oficial
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=uCAdpWmbGeE" target="_blank" class="inline-flex items-center justify-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-xl transition-all transform hover:scale-105 shadow-lg shadow-red-600/25">
+                        <i data-lucide="play" class="w-5 h-5"></i>
+                        Assistir Vídeo
+                    </a>
+                </div>
+
+                <p class="mt-8 text-slate-500 text-sm">
+                    Construtora Calper • Rua Luiz Carlos Sarolli, Pontal Oceânico • Recreio dos Bandeirantes/RJ
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-8 border-t border-slate-800">
+        <div class="container mx-auto px-6 text-center text-slate-500 text-sm">
+            <p>Dashboard informativo • Dados de mercado baseados em pesquisas AirDNA e FipeZAP 2026</p>
+            <p class="mt-2">Este material não constitui oferta de investimento. Consulte sempre o memorial descritivo oficial.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach((el) => observer.observe(el));
+
+        // Revenue Chart - CORREÇÃO: max ajustado para 12000
+        const ctx1 = document.getElementById('revenueChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['Baixa Temporada', 'Média Temporada', 'Alta Temporada', 'Carnaval/Réveillon'],
+                datasets: [{
+                    label: 'Receita Estimada (R$)',
+                    data: [2800, 4200, 6500, 9500],
+                    backgroundColor: [
+                        'rgba(100, 116, 139, 0.7)',
+                        'rgba(6, 182, 212, 0.8)',
+                        'rgba(16, 185, 129, 0.8)',
+                        'rgba(245, 158, 11, 0.8)'
+                    ],
+                    borderColor: [
+                        'rgb(100, 116, 139)',
+                        'rgb(6, 182, 212)',
+                        'rgb(16, 185, 129)',
+                        'rgb(245, 158, 11)'
+                    ],
+                    borderWidth: 1,
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false, // CORREÇÃO: permite altura fixa
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return 'R$ ' + context.parsed.y.toLocaleString('pt-BR');
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 12000,
+                        ticks: {
+                            color: 'rgba(148, 163, 184, 0.8)',
+                            stepSize: 2000,
+                            callback: function(value) {
+                                return 'R$ ' + value.toLocaleString('pt-BR');
+                            }
+                        },
+                        grid: { color: 'rgba(148, 163, 184, 0.1)' }
+                    },
+                    x: {
+                        ticks: { color: 'rgba(148, 163, 184, 0.8)' },
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        // Comparison Chart - CORREÇÃO: maintainAspectRatio false
+        const ctx2 = document.getElementById('compareChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'doughnut',
+            data: {
+                labels: ['Aluguel Tradicional (Anual)', 'Airbnb - Baixa Estimativa', 'Airbnb - Alta Estimativa'],
+                datasets: [{
+                    data: [36000, 50000, 70000],
+                    backgroundColor: [
+                        'rgba(148, 163, 184, 0.6)',
+                        'rgba(6, 182, 212, 0.7)',
+                        'rgba(16, 185, 129, 0.8)'
+                    ],
+                    borderColor: 'rgba(15, 23, 42, 1)',
+                    borderWidth: 4,
+                    hoverOffset: 10
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false, // CORREÇÃO: permite altura fixa
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: 'rgba(148, 163, 184, 0.9)',
+                            padding: 20,
+                            usePointStyle: true,
+                            font: { size: 11 }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                label += 'R$ ' + context.parsed.toLocaleString('pt-BR');
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
